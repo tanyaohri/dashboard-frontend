@@ -1,11 +1,11 @@
 import "./app.css";
+import  GraphicalView  from "./components/Graph";
 import { Sidebar } from "./components/Sidebar";
 import { Widget, LabelWithValue } from "./components/StaticView";
 
 function App() {
   return (
     <div>
-      Hi there 
       <Sidebar>
         <LabelWithValue 
           label={"Name"}
@@ -22,7 +22,10 @@ function App() {
           title={"Name"}
           subtitle={"Hey"}
         />
+       
       </div>
+
+    
      
      
     </div>
