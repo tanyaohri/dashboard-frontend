@@ -4,15 +4,26 @@ import Typography from "@material-ui/core/Typography";
 import useStyles from "./styles";
 
 export default function Widget({
+    children,
     shadowLevel=3,
     title,
-    subtitle
+    subtitle,
+    footer,
+    minWidth=420,
+    minHeight=320
+
 }) {
 
     const classes = useStyles();
     return (
         <React.Fragment>
-            <Card className={classes.root}>
+            <Card 
+                className={classes.root} 
+                style={{
+                    minWidth:minWidth,
+                    minHeight:minHeight
+                }}
+            >
                 <CardHeader
                     className={classes.header}
                     component={Typography}
@@ -20,28 +31,20 @@ export default function Widget({
                     subheader={subtitle}
                 />
                 <CardContent className={classes.content}>
-                    <div className={`${classes.contentItem} ${classes.textContent}`}>
-                        <div>Content 1</div>
-                        <div>Content 2</div>
-                    </div>
-                    <div className={classes.contentItem}>
-                        <img src="https://picsum.photos/220" />
-                    </div>
+                    {children}
                 </CardContent>
-                <div className={classes.footer}>
-                <Typography>Footer Text</Typography>
-                </div>
+
+                {
+                    footer && (
+                        <div className={classes.footer}>
+                            <Typography>
+                                {footer}
+                            </Typography>
+                        </div>
+                    )
+                }
+                
             </Card>
-            <div style={{ marginTop: "40px", marginLeft: 20, textAlign: "left" }}>
-                <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://smartdevpreneur.com/tailoring-the-material-ui-card-component/"
-                >
-                Read more about the Material-UI Card component here
-                </a>
-            </div>
-            
         </React.Fragment>
 
     )
