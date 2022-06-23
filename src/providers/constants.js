@@ -34,3 +34,9 @@ export const theme = {
         background: colors.grey_700
     }
 }
+
+export const datatables={
+    userColsMeta:{
+        
+    }
+}
