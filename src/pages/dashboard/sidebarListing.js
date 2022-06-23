@@ -2,7 +2,7 @@ import React from 'react'
 import { Sidebar } from '../../components/Sidebar'
 import LabelWithValue from '../../components/StaticView/labelWithValue'
 import { SiderbarTitle } from '../../providers/constants'
-import {Grid, Button} from "@material-ui/core";
+import {Avatar, List, ListItem, ListItemAvatar, ListItemText} from "@material-ui/core";
 import useStyles from "./styles";
 
 export const SidebarListing = (
@@ -27,23 +27,20 @@ export const SidebarListing = (
                     />
                 }
             > 
-                <Grid container spacing={3}>
+                <List className={classes.listContainer} sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
                     {
                         listItems.length && listItems.map((item, ind) => {
                             return (
-                                <Grid item xs={12} sm={12} md={12} xl={12}>
-                                    <Button 
-                                        fullWidth
-                                        startIcon={item.icon}
-                                        className={classes.btnStyle}
-                                    >
-                                        {item.name}
-                                    </Button>
-                                </Grid>
+                                <ListItem>
+                                  <ListItemAvatar>
+                                      {item.icon}
+                                  </ListItemAvatar>
+                                  <ListItemText className={classes.routeLabelStyle} primary={item.name} />
+                                </ListItem>
                             )
                         })
                     }
-                </Grid>
+                </List>
             </Sidebar>
         </React.Fragment>
     )

@@ -6,12 +6,15 @@ export default makeStyles((prop) => ({
         marginLeft:20,
         marginTop:25
     },
-    btnStyle:{
-        justifyContent: "flex-start",
-        marginLeft:25,
+    routeLabelStyle:{
         textTransform:"none",
         fontSize:"16px",
+        marginLeft:"-20px",
+        marginBottom:"10px",
         fontWeight:400,
         color:theme.sidebar.text.child.inactive
+    },
+    listContainer:{
+        marginLeft:20
     }
 }));

@@ -28,7 +28,7 @@ const LabelWithValue = ({
     }
     
     return (
-        <Grid container>
+        <Grid container spacing={3}>
             <Grid item
                 xs={12}
                 sm={areaProp.label}
@@ -43,7 +43,7 @@ const LabelWithValue = ({
                 sm={areaProp.value}
                 md={areaProp.value}
             >
-                <Typography variant={valueVariant}>
+                <Typography style={{color:"#A4A6B3"}} variant={valueVariant}>
                     { value }
                 </Typography>
             </Grid>

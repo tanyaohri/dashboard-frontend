@@ -46,7 +46,7 @@ export const datatables={
 export const SiderbarTitle = 
 {
         
-        icon: <HeaderLogo viewBox="0 8 38 29" />,
+        icon: <HeaderLogo viewBox="0 4 42 34" />,
         name: "Dashboard"
     }
       
