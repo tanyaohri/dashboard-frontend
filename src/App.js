@@ -14,9 +14,6 @@ function App() {
           valuePercent={40}
         />
       </Sidebar>
-
-    
-
       <div className="mainContent">
         <Widget
           title={"Name"}
