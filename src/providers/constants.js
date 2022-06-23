@@ -1,4 +1,6 @@
-export const COMPONENTS= {
+import { AgentLogo, ArticleLogo, ContactLogo, HeaderLogo, IdeaLogo, OverviewActiveLogo, SettingLogo, SubscriptionLogo, TicketLogo } from "./Icons"
+
+export const COMPONENTS = {
     label_with_val: {
         horizontal: "horizontal",
         vertical: "vertical",
@@ -40,3 +42,53 @@ export const datatables={
         
     }
 }
+
+export const SiderbarTitle = 
+{
+        
+        icon: <HeaderLogo viewBox="0 8 38 29" />,
+        name: "Dashboard"
+    }
+      
+export const SidebarListMeta = [
+   
+    {
+        route : "/overview",
+        icon: <OverviewActiveLogo/> ,
+        name: "Overview"
+    },
+    {
+        route : "/ticket",
+        icon: <TicketLogo/> ,
+        name: "Tickets"
+    },
+    {
+        route : "/contacts",
+        icon: <ContactLogo/> ,
+        name: "Contacts"
+    },
+    {
+        route : "/agents",
+        icon: <AgentLogo/> ,
+        name: "Agents"
+    },
+    {
+        route : "/articles",
+        icon: <ArticleLogo/> ,
+        name: "Articles"
+    },
+    {
+        route : "/settings",
+        icon: <SettingLogo/> ,
+        name: "Settings"
+    },
+    {
+        route : "/subscription",
+        icon: <SubscriptionLogo/> ,
+        name: "Subscription",
+
+    }
+
+]
+
+

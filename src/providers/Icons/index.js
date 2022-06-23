@@ -1,12 +1,12 @@
-import { ReactComponent as DashboardIcon } from "./file/dashboardlogo.svg";
-import { ReactComponent as TicketIcon } from "./file/ticket.svg";
-import { ReactComponent as IdeaIcon } from "./file/idea.svg";
-import { ReactComponent as OverviewIcon } from "./file/overviewActiveIcon.svg";
-import { ReactComponent as ArticleIcon } from "./file/articlesIcon.svg";
-import { ReactComponent as AgentIcon } from "./file/agentIcon.svg";
-import { ReactComponent as ContactIcon } from "./file/contact.svg";
-import { ReactComponent as SubscriptionIcon } from "./file/subscription.svg";
-import { ReactComponent as SettingsIcon } from "./file/settings.svg";
+import { ReactComponent as DashboardIcon } from "../../providers/Icons/file/dashboardlogo.svg";
+import { ReactComponent as TicketIcon } from "../Icons/file/ticket.svg";
+import { ReactComponent as IdeaIcon } from "../Icons/file/idea.svg";
+import { ReactComponent as OverviewIcon } from "../Icons/file/overviewActiveIcon.svg";
+import { ReactComponent as ArticleIcon } from "../Icons/file/articlesIcon.svg";
+import { ReactComponent as AgentIcon } from "../Icons/file/agentsIcon.svg";
+import { ReactComponent as ContactIcon } from "../Icons/file/contact.svg";
+import { ReactComponent as SubscriptionIcon } from "../Icons/file/subscription.svg";
+import { ReactComponent as SettingsIcon } from "../Icons/file/settings.svg";
 
 import { SvgIcon } from "@material-ui/core";
 
@@ -18,7 +18,7 @@ const HeaderLogo = (props) => {
     )
 }
 
-const overviewActiveLogo = (props) => {
+const OverviewActiveLogo = (props) => {
     return (
         <SvgIcon>
             <OverviewIcon {...props} />
@@ -84,7 +84,7 @@ const SubscriptionLogo = (props) => {
 
 export {
     HeaderLogo,
-    overviewActiveLogo,
+    OverviewActiveLogo,
     IdeaLogo,
     AgentLogo,
     ArticleLogo,
