@@ -18,7 +18,7 @@ const HeaderLogo = (props) => {
     )
 }
 
-const overviewActiveLogo = (props) => {
+const OverviewActiveLogo = (props) => {
     return (
         <SvgIcon>
             <OverviewIcon {...props} />
@@ -84,7 +84,7 @@ const SubscriptionLogo = (props) => {
 
 export {
     HeaderLogo,
-    overviewActiveLogo,
+    OverviewActiveLogo,
     IdeaLogo,
     AgentLogo,
     ArticleLogo,
