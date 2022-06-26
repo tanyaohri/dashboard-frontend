@@ -129,6 +129,10 @@ function Datatable(){
             <MUIDataTable
                 columns={columns} 
                 data={ticketsWithPriority}  
+                
+                options={{
+                    selectableRows:false
+                }}
             />
         </React.Fragment>
     )
