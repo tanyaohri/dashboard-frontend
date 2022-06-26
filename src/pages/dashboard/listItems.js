@@ -2,7 +2,8 @@ import React from "react";
 import {
    Grid,
     Typography,
-    Divider
+    Divider,
+    Button
 } from "@material-ui/core"
 import useStyles from "./styles";
 import LabelWithValue from "../../components/StaticView/labelWithValue";
@@ -35,29 +36,32 @@ export const GraphDataList = () => {
 
     const classes = useStyles();
     return (
-        graphListData.map((entry) => {
+        graphListData.map((entry, ind) => {
             return (
-                <Grid container spacing={3} style={{marginLeft:-70}}>
-                    <Grid item
-                        xs={12}
-                        sm={12}
-                        md={12}
-                    >
-                        <Typography className={classes.labelStyle}>
-                            { entry.label }
-                        </Typography>
+                <React.Fragment>
+                    <Grid container spacing={0} style={{marginLeft:-60}}>
+                        <Grid item
+                            xs={12}
+                            sm={12}
+                            md={12}
+                        >
+                            <Button fullWidth className={classes.labelStyle}>
+                                { entry.label }
+                            </Button>
+                        </Grid>
+                        <Grid item
+                            xs={12}
+                            sm={12}
+                            md={12}
+                        >
+                            <Button fullWidth className={classes.valueStyle}>
+                                { entry.value }
+                            </Button>
+                        </Grid>
                     </Grid>
-                    <Grid item
-                        xs={12}
-                        sm={12}
-                        md={12}
-                    >
-                        <Typography className={classes.valueStyle}>
-                            { entry.value }
-                        </Typography>
-                    </Grid>
-                  
-             </Grid>
+                    {graphListData.length-1!==ind && <Divider style={{marginLeft:-90, maxWidth:250}} variant="fullWidth"/>} 
+                </React.Fragment>
+                
             )
         })
     )

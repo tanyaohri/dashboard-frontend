@@ -18,8 +18,9 @@ export default makeStyles((prop) => ({
         marginLeft:20
     },
     paper:{
-        minWidth:1122, 
+        minWidth:1050, 
         minHeight:546,
+        maxHeight:546,
         borderRadius:8
     },
     subtitle:{
@@ -46,9 +47,49 @@ export default makeStyles((prop) => ({
         marginTop:20
     },
     labelStyle:{
-
+        fontFamily: 'Mulish',
+        fontWeight: 600,
+        fontStyle:"normal",
+        textTransform:"none",
+        fontSize: 16,
+        color:"#9FA2B4",
+        "&:hover": {
+            backgroundColor: "#FFF"
+        }
     },
+    cardHeadStyle:{
+        fontFamily: 'Mulish',
+        fontWeight: 600,
+        fontStyle:"normal",
+        textTransform:"none",
+        fontSize: 19,
+        color:"#9FA2B4",
+        "&:hover": {
+            backgroundColor: "#FFF"
+        }
+    },
+    cardContentStyle:{
+        lineHeight:-10,
+        fontFamily: 'Mulish',
+        fontWeight: 700,
+        fontStyle:"normal",
+        textTransform:"none",
+        fontSize: 40,
+        color:"#252733",
+        "&:hover": {
+            backgroundColor: "#FFF"
+        }
+    },
+    
     valueStyle:{
-        marginLeft:20
+        fontFamily: 'Mulish',
+        fontWeight: 700,
+        fontStyle:"normal",
+        textTransform:"none",
+        fontSize: 24,
+        color:"#252733",
+        "&:hover": {
+            backgroundColor: "#FFF"
+        }
     }
 }));
