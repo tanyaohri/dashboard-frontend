@@ -2,6 +2,26 @@ import { makeStyles } from "@material-ui/styles";
 import { theme } from "../../providers/constants";
 
 export default makeStyles((prop) => ({
+    listItem:{
+        justifyContent:"flex-start",
+        marginTop:20,
+        color:"#A4A6B3",
+        fontSize:16,
+        textTransform:"none",
+        letterSpacing: "0.2px",
+        "&:hover": {
+            backgroundColor: "#9FA2B4",
+            opacity: 0.2,
+        },
+        "&:hover": {
+            color:"#FFF"
+        }
+    },
+    sidebarStyle:{
+        marginLeft:25,
+        marginTop:2,
+        color:"white"
+    },
     container:{
         marginLeft:20,
         marginTop:25

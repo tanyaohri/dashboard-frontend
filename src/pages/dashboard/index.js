@@ -8,6 +8,7 @@ import useStyles from "./styles";
 import {BlueDividerIcon, GreyDividerIcon} from "./../../providers/iconsloader"
 import { GraphDataList } from './listItems'
 import { CardListView } from './cardList'
+import DataTable from '../../components/DataTable'
 
 
 function Dashboard() {
@@ -31,7 +32,15 @@ function Dashboard() {
           <SidebarListing listItems={SidebarListMeta} />
         </Grid>
         <Grid item xs={12} sm={8} md={8}>
+          <Grid container> 
+            <Grid item xs={8} sm={10} md={10}>
+              
+            </Grid>
+            <Grid item xs={8} sm={2} md={2}>
 
+            </Grid>
+            
+          </Grid>
           <Container className={classes.container}>
             <CardListView/>
             <Paper className={classes.paper}>
@@ -76,15 +85,14 @@ function Dashboard() {
                     <GraphDataList/>
                 </Grid>
               </Grid>
-              
-
-             
             </Paper>
             
           </Container>
         </Grid>
 
       </Grid>
+
+      <DataTable/>
 
     </div>
   )

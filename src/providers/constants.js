@@ -78,6 +78,11 @@ export const SidebarListMeta = [
         name: "Articles"
     },
     {
+        route : "/articles",
+        icon: null ,
+        name: null
+    },
+    {
         route : "/settings",
         icon: <SettingLogo/> ,
         name: "Settings"

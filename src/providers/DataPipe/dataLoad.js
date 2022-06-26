@@ -1,9 +1,10 @@
 const getTickets = () => {
-    return fetch({
-        method:"GET",
-        url:"http://localhost:8000/data/tickets"
-    }).then((res) => res)
-    .catch((err) => console.log(err))
+    
+    return new Promise((resolve, reject) => {
+        fetch("/data/tickets")
+        .then(response => resolve(response.json()))
+        .catch(err => reject(err))
+    })
 }
 
 

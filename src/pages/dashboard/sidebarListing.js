@@ -2,8 +2,9 @@ import React from 'react'
 import { Sidebar } from '../../components/Sidebar'
 import LabelWithValue from '../../components/StaticView/labelWithValue'
 import { SiderbarTitle } from '../../providers/constants'
-import {Avatar, List, ListItem, ListItemAvatar, ListItemText} from "@material-ui/core";
+import {Avatar, Button, Divider, Grid, List, ListItem, ListItemAvatar, ListItemText} from "@material-ui/core";
 import useStyles from "./styles";
+import { setLocalStorageItem } from '../../utils/appUtils';
 
 export const SidebarListing = (
     {
@@ -13,6 +14,9 @@ export const SidebarListing = (
     }
 ) => {
     const classes = useStyles();
+    const handleRouteChange = (index) => {
+        setLocalStorageItem("activeRoute", index);
+    }
     return (
         <React.Fragment>
             <Sidebar 
@@ -27,20 +31,31 @@ export const SidebarListing = (
                     />
                 }
             > 
-                <List className={classes.listContainer} sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                    {
-                        listItems.length && listItems.map((item, ind) => {
-                            return (
-                                <ListItem>
-                                  <ListItemAvatar>
-                                      {item.icon}
-                                  </ListItemAvatar>
-                                  <ListItemText className={classes.routeLabelStyle} primary={item.name} />
-                                </ListItem>
-                            )
-                        })
+               
+                {listItems.length && listItems.map((item, ind) => {
+                    if(item.icon === null || item.name ===null){
+                        return (
+                            <Divider style={{border:"0.001em solid #DFE0EB", opacity:0.3, height:0, marginTop:20}}/>
+                        )
                     }
-                </List>
+
+                    return (
+
+                        <React.Fragment>
+                            <Button 
+                                key={ind}
+                                onClick={() => handleRouteChange(ind)}
+                                startIcon={item.icon}
+                                fullWidth size="medium"
+                                className={classes.listItem}
+                                classes={{ startIcon: classes.sidebarStyle}}
+                            > 
+                                {item.name}
+                            </Button>    
+                        </React.Fragment>
+                    )
+
+                })}
             </Sidebar>
         </React.Fragment>
     )
