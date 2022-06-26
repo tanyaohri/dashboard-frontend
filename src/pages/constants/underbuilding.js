@@ -14,15 +14,13 @@ const UnderProgressComponent = () => {
                 </Grid>
                 <Grid item xs={8} >
                     
-                    <Typography variant="h4">
-                    Current Page [{location.pathname}] is under progress !
+                    <Typography variant="h5">
+                        Current Page [{location.pathname}] is under progress !
                     </Typography> 
                     
                 </Grid>
                 <Grid item xs={3} md={2} sm={2}>
                 </Grid>
-
-                
             </Grid>
             <br/>
             <br/>
