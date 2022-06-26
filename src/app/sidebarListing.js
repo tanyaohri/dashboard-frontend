@@ -1,21 +1,29 @@
 import React from 'react'
-import { Sidebar } from '../../components/Sidebar'
-import LabelWithValue from '../../components/StaticView/labelWithValue'
-import { SiderbarTitle } from '../../providers/constants'
-import {Avatar, Button, Divider, Grid, List, ListItem, ListItemAvatar, ListItemText} from "@material-ui/core";
-import useStyles from "./styles";
-import { setLocalStorageItem } from '../../utils/appUtils';
+import { Sidebar } from '../components/Sidebar'
+import LabelWithValue from '../components/StaticView/labelWithValue'
+import { routes, SiderbarTitle } from '../providers/constants'
+import {
+    Button, Divider,
+} from "@material-ui/core";
+
+import {useNavigate} from "react-router-dom"
+import useStyles from "../pages/dashboard/styles";
+import { setLocalStorageItem } from '../utils/appUtils';
 
 export const SidebarListing = (
     {
         listItems,
+        routingHandler,
         limit,
         isScrollable
     }
 ) => {
     const classes = useStyles();
+    const navigate = useNavigate(); 
     const handleRouteChange = (index) => {
         setLocalStorageItem("activeRoute", index);
+        navigate(routes[index].route, {replace:true})
+        routingHandler(routes[index].name)
     }
     return (
         <React.Fragment>

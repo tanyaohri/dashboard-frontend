@@ -1,10 +1,10 @@
 import "./app.css";
-import Dashboard from "./pages/dashboard";
-
+import React from "react";
+import { FullApp } from "./app/index";
 function App() {
   return (
     <div>
-      <Dashboard/>
+      <FullApp/>
     </div>
   );
 }

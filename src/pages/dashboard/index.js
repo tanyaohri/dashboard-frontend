@@ -1,15 +1,11 @@
 import { Grid , Container, List, Button,Paper, Typography, Divider} from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
 import GraphicalView from '../../components/Graph'
-import { SidebarListMeta } from '../../providers/constants'
 import { getGraphData } from '../../providers/DataPipe/dataLoad'
-import SidebarListing from './sidebarListing'
 import useStyles from "./styles";
 import {BlueDividerIcon, GreyDividerIcon} from "./../../providers/iconsloader"
 import { GraphDataList } from './listItems'
-import { CardListView } from './cardList'
-import DataTable from '../../components/DataTable'
-
+import { CardListView } from './cardList';
 
 function Dashboard() {
 
@@ -25,22 +21,7 @@ function Dashboard() {
 
     
   return (
-    <div>
-    
-      <Grid container>
-        <Grid item xs={12} sm={2} md={2}>
-          <SidebarListing listItems={SidebarListMeta} />
-        </Grid>
-        <Grid item xs={12} sm={8} md={8}>
-          <Grid container> 
-            <Grid item xs={8} sm={10} md={10}>
-              
-            </Grid>
-            <Grid item xs={8} sm={2} md={2}>
-
-            </Grid>
-            
-          </Grid>
+      <React.Fragment>
           <Container className={classes.container}>
             <CardListView/>
             <Paper className={classes.paper}>
@@ -88,13 +69,7 @@ function Dashboard() {
             </Paper>
             
           </Container>
-        </Grid>
-
-      </Grid>
-
-      <DataTable/>
-
-    </div>
+      </React.Fragment>
   )
 }
 

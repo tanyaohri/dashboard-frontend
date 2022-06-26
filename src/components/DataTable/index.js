@@ -134,4 +134,4 @@ function Datatable(){
     )
 }
 
-export default React.memo(Datatable);
+export default Datatable;

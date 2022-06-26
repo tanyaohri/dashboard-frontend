@@ -1,3 +1,5 @@
+import DataTable from "../components/DataTable"
+import Dashboard from "../pages/dashboard"
 import { AgentLogo, ArticleLogo, ContactLogo, HeaderLogo, IdeaLogo, OverviewActiveLogo, SettingLogo, SubscriptionLogo, TicketLogo } from "./Icons"
 
 export const COMPONENTS = {
@@ -50,17 +52,19 @@ export const SiderbarTitle =
         name: "Dashboard"
     }
       
-export const SidebarListMeta = [
+export const routes = [
    
     {
-        route : "/overview",
+        route : "/",
         icon: <OverviewActiveLogo  viewBox="0 0 15 12" /> ,
-        name: "Overview"
+        name: "Overview",
+        Component:Dashboard
     },
     {
         route : "/ticket",
         icon: <TicketLogo/> ,
-        name: "Tickets"
+        name: "Tickets",
+        Component:DataTable
     },
     {
         route : "/contacts",
@@ -91,7 +95,6 @@ export const SidebarListMeta = [
         route : "/subscription",
         icon: <SubscriptionLogo/> ,
         name: "Subscription",
-
     }
 
 ]
